@@ -1,12 +1,16 @@
-{
-    let blockScope=2;
-    console.log(blockScope);
-}
+var message = "this message is in global scope";
+console.log("Global : message =  "+ message);
 
-function ans(){
-    let functionScope=4;
-    console.log(functionScope);
+var a = function ()
+{
+    var message = "this message is in local scope or in Function a ";
+    console.log(" message IN FUNCTION a =" + message);
+    b();
+
 }
-ans();
-let globalScope=6;
-console.log(globalScope);
+var b  = function()
+{
+    console.log("message in function b = " + message );
+
+}
+a();
